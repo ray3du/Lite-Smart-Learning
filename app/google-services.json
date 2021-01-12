@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "27673642052",
+    "project_id": "m-soma",
+    "storage_bucket": "m-soma.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27673642052:android:9d978d576379fdbd80e811",
+        "android_client_info": {
+          "package_name": "com.alveen.m_soma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "27673642052-cdkov9aujuvknd9v9gpdtqvltdrckjpn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alveen.m_soma",
+            "certificate_hash": "d79c3772e0b0075638fa2868ffd0a4f053085e4d"
+          }
+        },
+        {
+          "client_id": "27673642052-3i3ggi2bafa38ne38s7eh1cvareg69fe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY_xdjpbEf1myo9qBy6kjxmkapO5EYUQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "27673642052-3i3ggi2bafa38ne38s7eh1cvareg69fe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -67,7 +67,8 @@ class RegistrationActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
                         spinnerProgress.isVisible = false
-                        val intent = Intent(this, MainActivity2::class.java)
+                        val intent = Intent(this, MainActivity::class.java)
+                        intent.putExtra("message", "Successfully registered")
                         startActivity(intent)
                     } else {
                         // If sign in fails, display a message to the user.

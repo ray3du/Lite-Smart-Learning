@@ -2,10 +2,7 @@ package com.alveen.m_soma
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.isVisible
@@ -27,6 +24,14 @@ class MainActivity : AppCompatActivity() {
         val emailUser = findViewById<EditText>(R.id.email)
         val passwordUser = findViewById<EditText>(R.id.password)
         val spinnerProgress = findViewById<ProgressBar>(R.id.spinnerLogin)
+        val successErrorMessage = findViewById<TextView>(R.id.successError)
+
+        //Handle intent extras
+        var bundle: Bundle? = intent.extras
+
+        if (bundle != null){
+            successErrorMessage.text = bundle.getString("message")
+        }
 
         setSupportActionBar(toolbar)
 

@@ -15,7 +15,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/orange"
         android:gravity="center"
-        android:minHeight="?attr/actionBarSize"
         android:fitsSystemWindows="true">
 
         <TextView
@@ -56,6 +55,18 @@
             android:textAlignment="center"/>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/successError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/inputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/loginTitle"
+        android:textSize="16sp"
+        android:textColor="@color/orange"
+        android:textAlignment="center"/>
 
     <LinearLayout
         android:id="@+id/inputLayout"

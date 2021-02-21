@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MSoma">
         <activity android:name=".UnitActivity"></activity>
-        <activity android:name=".MainActivity2" />
+        <activity android:name=".MainViewActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

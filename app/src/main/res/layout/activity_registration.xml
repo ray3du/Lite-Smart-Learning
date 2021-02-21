@@ -97,8 +97,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
+            app:endIconMode="password_toggle"
             >
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/passwordRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         btnRegistration.setOnClickListener {
             val intent = Intent(this@MainActivity, RegistrationActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //onclick listener
@@ -63,9 +64,10 @@ class MainActivity : AppCompatActivity() {
             ) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
-                    val intent = Intent(this, MainActivity2::class.java)
+                    val intent = Intent(this, MainViewActivity::class.java)
                     spinnerProgress.isVisible = false
                     startActivity(intent)
+                    finish()
                 } else {
                     // If sign in fails, display a message to the user.
                     spinnerProgress.isVisible = false

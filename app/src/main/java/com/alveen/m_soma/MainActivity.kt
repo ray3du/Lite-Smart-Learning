@@ -57,7 +57,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun verifyUser(email: String, password: String, spinnerProgress: ProgressBar){
+    override fun onStart() {
+        super.onStart()
+        val currentUser = mAuth.currentUser
+        if (currentUser != null) {
+            startActivity(Intent(this, MainViewActivity::class.java))
+            finish()
+        }
+    }
+
+        private fun verifyUser(email: String, password: String, spinnerProgress: ProgressBar){
         mAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(
                 this
@@ -80,4 +89,5 @@ class MainActivity : AppCompatActivity() {
                 // ...
             }
     }
+
 }

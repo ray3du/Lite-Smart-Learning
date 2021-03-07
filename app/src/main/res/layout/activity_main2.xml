@@ -153,6 +153,7 @@
         <!-- COLUMN 2  -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/chemistry"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -190,6 +191,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/physics"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -227,6 +229,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/biology"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"

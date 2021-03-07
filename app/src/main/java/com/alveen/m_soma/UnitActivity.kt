@@ -92,6 +92,12 @@ class UnitActivity : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, MainViewActivity::class.java))
+        finish()
+    }
+
     //handle biology
     private fun handleBiology(){
         // Read from the database

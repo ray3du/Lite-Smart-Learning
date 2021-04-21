@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MSoma">
-        <activity android:name=".UnitActivity"></activity>
+        <activity android:name=".MeetingActivity"></activity>
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".QuizActivity" />
+        <activity
+            android:name=".NavActivity"
+            android:label="@string/title_activity_nav"
+            android:theme="@style/Theme.MSoma.NoActionBar" />
+        <activity android:name=".WebActivity" />
+        <activity android:name=".UnitActivity" />
         <activity android:name=".MainViewActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".MainActivity">

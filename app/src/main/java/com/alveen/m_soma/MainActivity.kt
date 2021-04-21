@@ -25,9 +25,10 @@ class MainActivity : AppCompatActivity() {
         val passwordUser = findViewById<EditText>(R.id.password)
         val spinnerProgress = findViewById<ProgressBar>(R.id.spinnerLogin)
         val successErrorMessage = findViewById<TextView>(R.id.successError)
+        val message = findViewById<TextView>(R.id.message)
 
         //Handle intent extras
-        var bundle: Bundle? = intent.extras
+        val bundle: Bundle? = intent.extras
 
         if (bundle != null){
             successErrorMessage.text = bundle.getString("message")
@@ -61,8 +62,14 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         val currentUser = mAuth.currentUser
         if (currentUser != null) {
-            startActivity(Intent(this, MainViewActivity::class.java))
-            finish()
+            if (currentUser.email == "admin@gmail.com"){
+                startActivity(Intent(this, AdminActivity::class.java))
+                finish()
+
+            }else{
+                startActivity(Intent(this, MainViewActivity::class.java))
+                finish()
+            }
         }
     }
 
@@ -72,11 +79,18 @@ class MainActivity : AppCompatActivity() {
                 this
             ) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    val intent = Intent(this, MainViewActivity::class.java)
-                    spinnerProgress.isVisible = false
-                    startActivity(intent)
-                    finish()
+                    if (email == "admin@gmail.com"){
+                        val intent = Intent(this, AdminActivity::class.java)
+                        spinnerProgress.isVisible = false
+                        startActivity(intent)
+                        finish()
+                    }else {
+                        // Sign in success, update UI with the signed-in user's information
+                        val intent = Intent(this, MainViewActivity::class.java)
+                        spinnerProgress.isVisible = false
+                        startActivity(intent)
+                        finish()
+                    }
                 } else {
                     // If sign in fails, display a message to the user.
                     spinnerProgress.isVisible = false
